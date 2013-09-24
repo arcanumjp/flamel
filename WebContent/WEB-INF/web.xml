@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+	
+	<!-- サーブレットの設定１ -->
+	<servlet>
+		<servlet-name>click-servlet</servlet-name>
+		<servlet-class>jp.arcanum.click.ArcanumClickServlet</servlet-class>
+		<init-param>
+			<param-name>listings</param-name>
+			<param-value>false</param-value>
+		</init-param>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<!-- サーブレット２ -->
+	<servlet>
+		<servlet-name>click-servlet-for-error</servlet-name>
+		<servlet-class>jp.arcanum.click.ErrorServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	
+	<!-- サーブレットマッピング -->
+	<servlet-mapping>
+		<servlet-name>click-servlet</servlet-name>
+		<url-pattern>*.htm</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>click-servlet-for-error</servlet-name>
+		<url-pattern>*.xml</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>click-servlet-for-error</servlet-name>
+		<url-pattern>/*txt</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+	<error-page>
+		<error-code>404</error-code>
+		<location>/click/not-found.htm</location>
+	</error-page>
+	<error-page>
+		<error-code>403</error-code>
+		<location>/click/not-found.htm</location>
+	</error-page>
+	<error-page>
+		<error-code>501</error-code>
+		<location>/tools/error.htm</location>
+	</error-page>
+	<error-page>
+		<error-code>502</error-code>
+		<location>/tools/error.htm</location>
+	</error-page>
+
+<!--
+	  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>
+        Authentication of BasicAuth
+      </web-resource-name>
+      <url-pattern>/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name></role-name>
+    </auth-constraint>
+  </security-constraint>
+
+  <login-config>
+    <auth-method>BASIC</auth-method>
+    <realm-name>TestPage</realm-name>
+  </login-config>
+-->
+
+</web-app> 

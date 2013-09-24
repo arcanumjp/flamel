@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+
+<plugin>
+
+	<!--  
+	  ディレクトリ型のメニュー
+	-->
+	<class classname="jp.arcanum.click.plugin.DirMenuControl" />
+
+
+	<!--  
+	  カウンター
+	-->
+	<class classname="jp.arcanum.click.plugin.CounterControl">
+		<parameter>
+			<param-name>file</param-name>
+			<param-value>/WEB-INF/counter.txt</param-value>
+		</parameter>
+		<parameter>
+			<param-name>aaaa</param-name>
+			<param-value>aaaaaaaaaaaaaaaaaaaaaa</param-value>
+		</parameter>
+	</class>
+
+
+	<!--  
+	  Google１行アドセンス
+	-->
+	<class classname="jp.arcanum.click.plugin.LineAdsenseControl" />
+
+
+	<!--  
+	  パンくずリスト
+	-->
+	<class classname="jp.arcanum.click.plugin.DirListControl" />
+
+	<!--  
+	  ページ編集
+	-->
+	<class classname="jp.arcanum.click.plugin.EditPageControl" />
+
+	<!--  
+	  検索
+	-->
+	<class classname="jp.arcanum.click.plugin.KensakuControl" />
+
+
+</plugin>

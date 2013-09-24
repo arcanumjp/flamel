@@ -1,0 +1,244 @@
+
+/* ====================================== */
+/*
+ * BODYのスタイル
+ */
+/* ====================================== */
+.flamel_body{
+	width:100%;
+	background-color: aaaaff;
+}
+
+
+/* ====================================== */
+/*
+ * タイトルのスタイル
+ */
+/* ====================================== */
+.flamel_title{
+    width:100%;
+    background-color: #0066aa;
+    border-style: solid;
+    border-color: #000066;
+    border-width: 1px 2px 2px 1px;
+	margin:4px;
+	color:#000000;
+}
+
+/* ====================================== */
+/*
+ * パンくずリストのスタイル
+ */
+/* ====================================== */
+.flamel_dirlist{
+    width:100%;
+    background-color: white;
+    border-style: solid;
+    border-color: #000066;
+    border-width: 1px 2px 2px 1px;
+	margin:2px 4px 2px 4px;
+	height:20px;
+
+}
+
+
+/* ====================================== */
+/*
+ * 検索結果のスタイル
+ */
+/* ====================================== */
+.flamel_refer{
+    align:left;
+    margin:4px;
+    background-color: white;
+    border-style: solid;
+    border-color: #000066;
+    border-width: 1px 2px 2px 1px;
+    padding:8px;
+}
+
+/* ====================================== */
+/*
+ * メニューのスタイル
+ */
+/* ====================================== */
+.flamel_nemu{
+    float:left;
+    width:240px;
+    border-style: solid;
+    border-color: #000066;
+    border-width: 1px 2px 2px 1px;
+	margin:4px;
+
+}
+
+/* ====================================== */
+/*
+ * コンテンツ部分のスタイル
+ *  flamel_content        : サイトの表示用
+ *  flamel_content_editor : サイト更新の際のエディタ用
+ */
+/* ====================================== */
+.flamel_content, .flamel_content_editor{
+    top:100%;
+    margin-left:252px;
+    background-color: white;
+    border-style: solid;
+    border-color: #000066;
+    border-width: 1px 2px 2px 1px;
+    padding:8px;
+}
+
+.flamel_content_editor {
+    width:100%;
+    margin:4px;
+}
+
+
+/* ====================================== */
+/*
+ * フッタのスタイル
+ */
+/* ====================================== */
+.flamel_footer{
+    width:100%; 
+    background-color:#0066aa;
+    clear:both;
+    border-style: solid;
+    border-color: #000066;
+    border-width: 1px 2px 2px 1px;
+	margin:4px;
+
+}
+
+
+
+
+
+/* ====================================== */
+/*
+ * BODYタグのスタイル
+ */
+/* ====================================== */
+body {
+    background-color: aaaaff;
+    background-image: url(st07_bg.gif);
+}
+
+
+
+/* ====================================== */
+/*
+ * Ｈ＊タグのスタイル
+ */
+/* ====================================== */
+h1 {
+	width: 100%;
+	font-size: 200%;
+	font-weight: bold;
+	padding: 0.05em;
+}
+
+h2 {
+	font-weight: bold;
+	border-width: 0.05em 0.05em 0.05em 0.4em;
+	border-style: solid;
+	border-color: #000066;
+	background:  #f0f0ff;
+	font-size: 120%;
+	padding: 0.25em 0.15em 0.15em 1.0em;
+}
+
+h3 {
+	font-weight: bold;
+	border-width: 0.05em;
+	border-color: #ca8;
+	border-style: none none solid none;
+	font-size: 100%;
+	padding: 0.1em 0.2em 0.1em 0em;
+}
+
+h4 {
+	border-width: 0.5em;
+	border-color: #974;
+	border-style: none none none solid;
+	font-size: 100%;
+	font-weight: bold;
+	padding: 0 0 0 0.4em;
+}
+
+h5 {
+	font-size: 100%;
+	font-weight: bold;
+}
+
+h6 {
+	font-size: 85%;
+	font-weight: bold;
+}
+
+
+
+
+/* ====================================== */
+/*
+ * Ａタグのスタイル
+ */
+/* ====================================== */
+a:visited {
+	color: #000000;
+	text-decoration: underline;
+	font-weight:bold
+}
+
+a:link {
+	color: #000000;
+	text-decoration: underline;
+	font-weight:bold
+}
+
+a:hover {
+	color: #000000;
+	background-color: #aaaaaa;
+	text-decoration: underline;
+	font-weight:bold
+}
+
+a:active {
+	color: #000000;
+	text-decoration: underline;
+	font-weight:bold
+}
+
+
+
+/* ====================================== */
+/*
+ * テーブルタグのスタイル
+ */
+/* ====================================== */
+table {
+	border-style: ridge;
+	border-color: #ddd;
+	border-width: 0em;
+	border-collapse: collapse;
+}
+
+td {
+	background-color:white;
+	border-style: solid;
+	border-color: #999999;
+	border-width: 1px 1px 1px 1px;
+}
+
+
+th{
+	background-color:99CCFF;
+	color:#ffffff;
+	font-weight:bold;
+	border-style: solid;
+	border-color: #999999;
+	border-width: 1px 1px 1px 1px;
+}
+
+

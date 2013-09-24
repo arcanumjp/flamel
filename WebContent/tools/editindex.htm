@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+		<META http-equiv="Content-Style-Type" content="text/css">
+		<title>編集画面</title>
+		${imports}	<!-- Click Frameworkが必要とするもの   -->
+		${editorjs}	<!-- WYSYG Editorの設定 -->	
+
+	</head>
+<BODY bgcolor="#009999">
+
+		$form.startTag()
+			$message
+			
+			<table  bgcolor="#ccccff">
+				<tr>
+					<td>
+						編集ページ
+					</td>
+					<td bgcolor="white">
+						$editpath
+					</td>
+				</tr>
+				<tr>
+					<td>
+						 マークアップ
+					</td>
+					<td bgcolor="white">
+						$markup
+					</td>
+				</tr>
+			</table>
+		
+			<table bgcolor="#ccccff" width="400">
+				<tr>
+					<td colspan="2">
+						<table width="100%">
+							<tr>
+								<td align="left">$form.fields.prevrireki</td>
+								<td align="center">$rirekistatus　</td>
+								<td align="right">$form.fields.nextrireki</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						$form.fields.contents
+					</td>
+				</tr>
+			</table>
+			
+			$form.fields.savebtn &nbsp; 
+			$form.fields.cancel &nbsp;
+			$form.fields.onoff
+				
+		$form.endTag()
+
+	</BODY>
+</html>
+

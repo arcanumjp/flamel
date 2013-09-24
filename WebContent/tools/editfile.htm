@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+		<META http-equiv="Content-Style-Type" content="text/css">
+		<title>編集画面</title>
+		$imports
+
+		<script type="text/javascript" src="../click/edit_area/edit_area_full.js"></script>
+		<script type="text/javascript">
+		
+			editAreaLoader.init({
+				id: "form_filecontents"
+				,start_highlight: true
+				,allow_toggle: false
+				,language: "ja"
+				,syntax: "$fileext"	
+				,toolbar: "search, go_to_line, |, undo, redo, |, select_font, |, syntax_selection, |, change_smooth_selection, highlight, reset_highlight, |, help"
+				,syntax_selection_allow: "ptext,css,html,js,php,python,vb,xml,c,cpp,basic,pas,brainfuck,msx,z80"
+				,allow_toggle: true
+				,is_multi_files: false
+			});
+
+		</script>
+
+	</head>
+<BODY bgcolor="#009999">
+
+		$form.startTag()
+			$message
+			<table bgcolor="#ccccff" width="400">
+				<tr>
+					<td>
+						編集ページ
+					</td>
+					<td bgcolor="white">
+						$editpath
+					</td>
+				</tr>
+			</table>
+			$form.fields.filecontents<br>
+			
+			$form.fields.ok &nbsp;
+			$form.fields.cancel &nbsp;
+			
+		$form.endTag()
+
+	</BODY>
+</html>
+

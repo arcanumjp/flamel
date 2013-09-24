@@ -1,0 +1,216 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+		<META http-equiv="Content-Style-Type" content="text/css">
+		<title>ツール画面</title>
+		<script type="text/javascript" src="../click/flamel.js"></script>
+		$imports
+
+	</head>
+<BODY bgcolor="#009999">
+
+		$form.startTag()
+
+			<TABLE width="100%">
+			
+				<!-- ◆◆◆　メッセージエリア　◆◆◆ -->
+				#if($message!="")
+				<tr bgcolor="white">
+					<td colspan="2">
+						<small>$message</small>
+					</td>
+				</tr>
+				#end
+				
+				<!-- ◆◆◆　ディレクトリメニュー　◆◆◆ -->
+				<TR>
+					<TD colspan="2" bgcolor="#ccccff">
+						<table width="100%" border="0" cellspacing="0">
+							<tr bgcolor="#9999ff">
+								<td>
+									$form.fields.managesite
+									$form.fields.password &nbsp $form.fields.changepass
+								</td>
+								<td align="right">
+									$form.fields.logout
+								</td>
+							</tr>
+						</table>
+				
+					</td>
+				</TR>
+				<TR>
+					<!-- ◆◆◆　ディレクトリツリー　◆◆◆ -->
+					<TD   bgcolor="#ccccff" >
+						<table width="100%">
+							<tr bgcolor="#9999ff">
+								<td>
+									$form.fields.newdirname $form.fields.newdir $form.fields.deldir 
+								</td>
+							</tr>
+						</table>
+
+						<div style="overflow: auto;height: 480px;width: 280px;">
+							#if($istreeok == true)
+								$dirtree
+							#else
+								site.propertiesのdocument_rootが不正です。
+								#stop
+							#end
+						</dev>
+
+					</TD>
+					
+					<!-- ◆◆◆　ディレクトリ詳細　◆◆◆ -->
+					<TD align="left" valign="top" bgcolor="#ccccff">
+					#if($isselect==true)	
+					<div style="overflow: scroll;height: 480px;">
+
+							<TABLE border="0" cellspacing="1"  width="100%" bgcolor="#9999ff">
+								<!--
+								<tr>
+									<td colspan="3" bgcolor="9999ff">
+										ディレクトリの詳細
+									</td>
+								</tr>
+								-->
+								<TR>
+									<TD rowspan="2" bgcolor="#eeeeff">ページ名</TD>
+									<TD             bgcolor="#eeeeff">物理名</TD>
+									<TD             bgcolor="white"  >$form.fields.dirpname</TD>
+								</TR>
+								<TR>
+									<TD             bgcolor="#eeeeff">論理名</TD>
+									<TD             bgcolor="white"  >$form.fields.dirlname</TD>
+								</TR>
+								<TR>
+									<TD colspan="2" bgcolor="#eeeeff">記事を公開する</TD>
+									<TD             bgcolor="white"  >$form.fields.publication</TD>
+								</TR>
+								<TR>
+									<TD colspan="2" bgcolor="#eeeeff">メニューに表示する</TD>
+									<TD             bgcolor="white"  >$form.fields.isshow</TD>
+								</TR>
+								<TR>
+									<TD colspan="2" bgcolor="#eeeeff">マークアップ</TD>
+									<TD             bgcolor="white"  >
+										$form.fields.editmeth
+									</TD>
+								</TR>
+								<TR>
+									<TD colspan="2" bgcolor="#eeeeff">配下を描画する</TD>
+									<TD             bgcolor="white"  >$form.fields.rendierchildren</TD>
+								</TR>
+								<TR>
+									<TD colspan="2" bgcolor="#eeeeff">説明</TD>
+									<TD             bgcolor="white"  >
+										$form.fields.description
+									</TD>
+								</TR>
+
+								<tr>
+									<TD colspan="2" bgcolor="#eeeeff">ファイル操作</TD>
+									<td             bgcolor="white">
+										<table>
+											<tr>
+												<td>
+													$form.fields.filelist
+												</td>
+												<td valign="top">
+								
+													<table>
+														<tr>
+															<td>$form.fields.filecopy</td>
+															<td>$form.fields.dircopy</td>
+															<td>$form.fields.pasteobj</td>
+														</tr>
+														<tr>
+															<td>$form.fields.filedownload</td>
+															<td>$form.fields.filedelete</td>
+															<td>$form.fields.fileedit</td>
+														</tr>
+													</table>
+													<fieldset>
+														$form.fields.inputfilename<br>
+														$form.fields.filerename
+														$form.fields.filemake
+													</fieldset>
+													<!--
+													<fieldset>
+														<input type="text"  size="30" />
+														<input type="button" style="width:100px" value="新規ファイル作成"  alt="hoge" disabled="true" >
+													</fieldset>
+													-->
+												</td>
+											</tr>
+										</table>
+										<small> $copymessage </small>
+									</td>
+								</tr>
+								<tr>
+									<TD colspan="2" bgcolor="#eeeeff">アップロード</TD>
+									<td             bgcolor="white">
+										$form.fields.filefld
+										&nbsp;
+										$form.fields.uploadindex
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2" bgcolor="#eeeeff">&nbsp;</td>
+									<td bgcolor="white">&nbsp;</td>
+								</tr>
+
+								<!--
+								<TR>
+									<TD colspan="2" bgcolor="#eeeeff">配下の表示順番<br>(対応中)</TD>
+									<TD             bgcolor="white"  >
+										<table>
+											<tr>
+												<td>
+													<select size="7" style="width:200px" disabled="true" title="まだ対応していません">
+														<option>論理名１</option>
+														<option>論理名２</option>
+														<option>論理名３</option>
+														<option>論理名４</option>
+														<option>論理名５</option>
+														<option>論理名６</option>
+														<option>論理名７</option>
+														<option>論理名８</option>
+														<option>論理名９</option>
+														<option>論理名１０</option>
+													</select>
+												</td>
+												<td valign="top">
+													<input type="button" value="上へ" disabled="true" /><br>
+													<input type="button" value="下へ" disabled="true" />
+												</td>
+											</tr>
+										</table>
+									</TD>
+								</TR>
+								<TR>
+									<TD colspan="2" bgcolor="#eeeeff">編集者<br>(対応中)</TD>
+									<TD             bgcolor="white"  >
+										$form.fields.direditor
+									</TD>
+								</TR>
+								-->
+								
+							</TABLE>
+
+					</div>
+					<div align="right">
+						$form.fields.okdetail
+						$form.fields.editindex
+					</div>
+					#end
+					</TD>
+				</TR>
+			</TABLE>
+
+		$form.endTag()
+
+	</BODY>
+</html>
+

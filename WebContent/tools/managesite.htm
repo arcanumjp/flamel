@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<META http-equiv="Content-Style-Type" content="text/css">
+		<title>サイト設定画面</title>
+		$imports
+
+	</head>
+<BODY bgcolor="#009999">
+		
+		$message
+	
+		$form.startTag()
+		
+		
+
+			<!-- ■■　スーパーユーザ設定　■■ -->
+<TABLE>
+				<tr>
+      <TD colspan="2" bgcolor="#cccccc">スパーユーザ設定</TD>
+    </tr>
+				<tr>
+      <TD bgcolor="#cccccc">ユーザ名</TD>
+      <TD bgcolor="#ffffff">$form.fields.username</TD>
+    </tr>
+				<tr>
+      <TD bgcolor="#cccccc">パスワード</TD>
+      <TD bgcolor="#ffffff">$form.fields.password1</TD>
+    </tr>
+				<tr>
+      <TD bgcolor="#cccccc">パスワード（確認用）</TD>
+      <TD bgcolor="#ffffff">$form.fields.password2</TD>
+    </tr>
+			</TABLE>
+<br>		
+
+			<!-- ■■　サイト一般設定　■■ -->
+<TABLE>
+				<tr>
+      <TD colspan="5" bgcolor="#cccccc">サイト一般</TD>
+    </tr>
+				<TR>
+      <TD colspan="3" bgcolor="#cccccc">タイトルバー<br></TD>
+      <TD bgcolor="#ffffff">$form.fields.headertitle</TD>
+      <TD bgcolor="#ffffff">&lt;TITLE&gt;$headertitle&lt;/TITLE&gt;</TD>
+    </TR>
+				<TR>
+      <TD colspan="3" bgcolor="#cccccc">サイトタイトル<br></TD>
+      <TD bgcolor="#ffffff">
+						$form.fields.sitetitle<br>
+						$form.fields.sitelinkable リンクあり
+					</TD>
+      <TD bgcolor="#ffffff">&lt;h1&gt;$sitetitle&lt;/h1&gt;</TD>
+    </TR>
+				<TR>
+      <TD colspan="3" bgcolor="#cccccc">メール<br></TD>
+      <TD bgcolor="#ffffff">
+						$form.fields.mailto<br>
+						$form.fields.maillinkable リンクあり<br>
+						$form.fields.mailtext
+					</TD>
+      <TD bgcolor="#ffffff">$mailto</TD>
+    </TR>
+				
+				<TR>
+      <TD colspan="3" bgcolor="#cccccc"><S>ポート番号</S></TD>
+      <TD bgcolor="#ffffff"><S>$form.fields.portno</S></TD>
+      <TD bgcolor="#ffffff">現在未使用</TD>
+    </TR>
+				<TR>
+      <TD colspan="3" bgcolor="#cccccc">ドキュメントルート</TD>
+      <TD bgcolor="#ffffff">$form.fields.docroot</TD>
+      <TD bgcolor="#ffffff">サイトのコンテンツのトップディレクトリ</TD>
+    </TR>
+				<TR>
+      <TD colspan="3" bgcolor="#cccccc">テンプレートhtmパス</TD>
+      <TD bgcolor="#ffffff">
+						$form.fields.templatepath
+						$form.fields.edittemp
+					</TD>
+      <TD bgcolor="#ffffff">テンプレートhtmlのパス</TD>
+    </TR>
+				<TR>
+      <TD rowspan="7" bgcolor="#cccccc">検索</TD>
+      <TD bgcolor="#cccccc">エラー</TD>
+      <TD bgcolor="#cccccc">条件なしメッセージ</TD>
+      <TD bgcolor="#ffffff">$form.fields.errnocond</TD>
+      <TD bgcolor="#ffffff">検索条件に入力なしの場合のメッセージ</TD>
+    </TR>
+				<TR>
+      <TD bgcolor="#cccccc">エラー</TD>
+      <TD bgcolor="#cccccc">結果なしメッセージ</TD>
+      <TD bgcolor="#ffffff">$form.fields.errnores</TD>
+      <TD bgcolor="#ffffff">検索結果が無しの場合のメッセージ</TD>
+    </TR>
+				<TR>
+      <TD rowspan="5" bgcolor="#cccccc">結果</TD>
+      <TD bgcolor="#cccccc">表示開始タグ</TD>
+      <TD bgcolor="#ffffff">$form.fields.resstarttag</TD>
+      <TD bgcolor="#ffffff">検索結果の開始タグ</TD>
+    </TR>
+				<TR>
+      <TD bgcolor="#cccccc">表示終了タグ</TD>
+      <TD bgcolor="#ffffff">$form.fields.resendtag</TD>
+      <TD bgcolor="#ffffff">検索結果の終了タグ</TD>
+    </TR>
+				<TR>
+      <TD bgcolor="#cccccc">前後文字数</TD>
+      <TD bgcolor="#ffffff">$form.fields.resshowlength</TD>
+      <TD bgcolor="#ffffff">ヒットした文字列から何文字表示するか</TD>
+    </TR>
+				<TR>
+      <TD bgcolor="#cccccc">強調開始</TD>
+      <TD bgcolor="#ffffff">$form.fields.resemphstarttag</TD>
+      <TD bgcolor="#ffffff">強調表示方法（開始タグ）</TD>
+    </TR>
+				<TR>
+      <TD bgcolor="#cccccc">強調終了</TD>
+      <TD bgcolor="#ffffff">$form.fields.resemphendtag</TD>
+      <TD bgcolor="#ffffff">強調表示方法（終了タグ）</TD>
+    </TR>
+			</TABLE>
+<br>
+			$form.fields.ok　$form.fields.back
+	
+	
+		$form.endTag()
+
+	</BODY>
+</html>
+

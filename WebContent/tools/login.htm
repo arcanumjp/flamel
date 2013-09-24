@@ -1,0 +1,28 @@
+
+<html>
+
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<META http-equiv="Content-Style-Type" content="text/css">
+<TITLE></TITLE>
+
+<BODY bgcolor="#009999">
+    $form.startTag()
+        <div style="background-color:white;">
+            <small>$message</small>
+        </div>
+
+        <table>
+            <tr>
+                <TD bgcolor="#cccccc">ユーザ名</TD>
+                <TD bgcolor="#ffffff">$form.fields.userid</TD>
+            </tr>
+            <tr>
+                <TD bgcolor="#cccccc">パスワード</TD>
+                <TD bgcolor="#ffffff">$form.fields.password</TD>
+            </tr>
+        </table>
+        $form.fields.login
+    $form.endTag()
+</BODY>
+
+</html>

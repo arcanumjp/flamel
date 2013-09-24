@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+
+<click-app charset="Shift_JIS" locale="ja" >
+
+	<!-- ページの設定 -->
+	<pages package="jp.arcanum.click.pages" automapping="true">
+
+		<page path="/tools/login.htm" 		classname="LoginPage" />
+		<page path="/tools/toolmain.htm" 	classname="ToolMainPage" />
+		<page path="/tools/editindex.htm" 	classname="EditIndexPage" />
+		<page path="/tools/editfile.htm" 	classname="EditFilePage" />
+		<page path="/tools/manageuser.htm" 	classname="ManageUserPage" />
+		<page path="/tools/managesite.htm" 	classname="ManageSitePage" />
+		<page path="/tools/download.htm" 	classname="DownloadPage" />
+		
+		<page path="/click/error.htm" classname="ErrorPage" />
+		<page path="/click/not-found.htm" classname="ErrorPage" />
+	
+		<excludes pattern="/click/tiny_mce/*"/> 
+
+	</pages>
+	
+
+	<!-- ヘッダの設定 -->
+	<headers>
+		<header name="Pragma" value="no-cache"/>
+		<header name="Cache-Control" value="no-store, no-cache, must-revalidate"/>
+	</headers>
+
+	<!-- ロギングの設定（リリース時は"production"にする） -->
+	<!--
+	<mode value="trace"/>
+	-->
+	<mode value="debug"/>
+
+</click-app> 

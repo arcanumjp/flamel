@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+
+<userlist>
+	<user>
+		<id>hoge</id>
+		<pass>hoge5963</pass>
+		<group>group1</group>
+	</user>
+</userlist>

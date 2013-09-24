@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+
+<authors>
+	<page id="/abc/der">
+		<author>
+			group1
+		</author>
+		<author>
+			group2
+		</author>
+	</page>
+	<page id="/abc/der/ghi">
+		<author>
+			group1
+		</author>
+		<author>
+			group2
+		</author>
+	</page>
+</authors>
