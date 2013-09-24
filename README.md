@@ -24,3 +24,8 @@ Click Frameworkで作った小さなコンテンツマネジメントシステ�
 <p>
 flamel.warをダウンロードして、JEEコンテナに配置してください。
 </p>
+
+
+<hr>
+
+<img src="site.png" />
